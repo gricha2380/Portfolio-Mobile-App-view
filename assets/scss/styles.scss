@@ -6,6 +6,7 @@ table {
 	background: #fff;
 	margin: 1em 0;
 	border: 1px solid rgba(34,36,38,.15);
+	&.ui.sheetTable {border: none;}
 	box-shadow: none;
 	border-radius: .28571429rem;
 	text-align: left;
@@ -33,4 +34,20 @@ table {
 
 .segment {
 	height: inherit;
+}
+
+#tabMenu {
+	.item {
+		width: 50%;
+	    text-align: center;
+	    display: inline;
+	    &.active {
+	    	background: #f9fafb;
+	    }
+	}
+
+}
+
+.ui.bottom.tab {
+	background: #f9fafb;
 }
