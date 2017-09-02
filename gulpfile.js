@@ -34,7 +34,7 @@ gulp.task("css",function(){
 });
 
 // build sass
-gulp.task('sass', ['cleanCSS'],function() {
+gulp.task('sass', function() { // ['cleanCSS'],
   return gulp.src("assets/scss/*.scss")
       .pipe(map.init())
       .pipe(sass())
@@ -46,8 +46,8 @@ gulp.task('sass', ['cleanCSS'],function() {
 
 // concat & minify js
 gulp.task("js",function(){
-	//gulp.src(["assets/js/jquery.min.js","assets/js/semantic.min.js","assets/js/canvasjs.min.js","assets/js/scripts.js"])
-	gulp.src("assets/js/*.js")
+	gulp.src(["assets/js/jquery.min.js","assets/js/semantic.min.js","assets/js/scripts.js"])
+	// gulp.src("assets/js/*.js")
 	.pipe(map.init())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify())

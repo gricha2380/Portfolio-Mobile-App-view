@@ -2,59 +2,29 @@
 <html>
   <body>
 
-    <p id="data"></p>
 
-    <script type="text/javascript" src="../../src/tabletop.js"></script>
-    <script type="text/javascript">
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/edit?usp=sharing';
-
-      function init() {
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: showInfo,
-                         simpleSheet: true } );
-      }
-
-      window.addEventListener('DOMContentLoaded', init)
-
-      function showInfo(data) {
-        // data comes through as a simple array since simpleSheet is turned on
-        //document.getElementById("data").innerHTML = JSON.stringify(data);
-        //console.log(data);
-        holder = data;
-        var before = '<td>', after = '</td>', row='', beforeRow = '<tr>', afterRow = '</tr>';
-        var table = '<table class="sheetTable" border = 1 cellpadding = 5>';
-
-        var e = 0;
-        for (var h in data[0]) {
-          e++;
-          if (e < 15) {
-            table+= '<th>'+h+"</th>";
-          }
-        }
+<div class="ui top attached tabular menu">
+  <a class="item active" data-tab="first">First</a>
+  <a class="item" data-tab="second">Second</a>
+</div>
+<div class="ui bottom attached tab segment active" data-tab="first">
+  <!-- <div class="ui segment"> -->
+      <div class="ui active inverted dimmer" id="portfolio">
+        <div class="ui text loader">Loading</div>
+      </div>
+    <!-- </div> -->
+</div>
+<div class="ui bottom attached tab segment" data-tab="second" id="stats">
+  Second
+</div>
 
 
-        for (var i = 0; i < data.length; i++) { // each row of spreadsheet data
-          row += beforeRow;
-          var rowCounter = 1; // loop for each cell of data
-          for (var e in data[i]) {
-            if (rowCounter < 15) {
-              row += before + data[i][e] + after;
-              rowCounter++;
-              //console.log("row couner is "+rowCounter);
-              console.log(e);
-            };
-            //console.log(row);
-          }
-          row += afterRow;
 
-        };
-        document.getElementById("data").innerHTML = table + row + "</table>" ;
-        // final output
-        //document.getElementById("data").innerHTML = data[0]+ /*x +" : "+ */ table + row + "</table>";
 
-      }
 
-      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
-    </script>
+    <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script type="text/javascript" src="assets/js/tabletop.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.min.js"></script>
   </body>
 </html>
