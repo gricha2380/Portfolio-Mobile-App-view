@@ -92,7 +92,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
 
       }
 
-      document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
+      document.write("The published spreadsheet is located at <a class='bottomLink'target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
 
 
  $('.menu .item').tab();
@@ -133,4 +133,9 @@ document.getElementById("statsTab").addEventListener("click", function(){
         }
         document.getElementById("stats").innerHTML = tableComplex + "</table>" ;
     }
+});
+
+document.getElementById("refresh").addEventListener("click", function(){
+  //.fetch()
+  location.reload();
 });

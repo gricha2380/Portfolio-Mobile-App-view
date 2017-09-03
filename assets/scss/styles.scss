@@ -1,6 +1,7 @@
 body {
-	padding: 10px;
+	padding: 0;
 	overflow: auto;
+	background: #eaf7f9;
 }
 table {
 	width: 100%;
@@ -35,6 +36,9 @@ table {
 
 .segment {
 	height: inherit;
+	&.bottom.attached {
+		overflow-y: hidden;
+	}
 }
 
 #tabMenu {
@@ -52,4 +56,14 @@ table {
 
 .ui.bottom.tab {
 	background: #f9fafb;
+}
+
+.bottomLink {
+	max-width: 100%;
+	display: block;
+	overflow: auto;
+	margin: 10px;
+}
+#refresh {
+	width: 100%;
 }
