@@ -1,5 +1,6 @@
 body {
 	padding: 10px;
+	overflow: auto;
 }
 table {
 	width: 100%;
@@ -37,6 +38,7 @@ table {
 }
 
 #tabMenu {
+	margin-top: 40px;
 	.item {
 		width: 50%;
 	    text-align: center;
