@@ -4,8 +4,8 @@
 
 
 <div class="ui top attached tabular menu" id="tabMenu">
-  <a class="item active" data-tab="first">Portfolio</a>
-  <a class="item" data-tab="second">Stats</a>
+  <a class="item active" data-tab="first" id="portfolioTab">Portfolio</a>
+  <a class="item" data-tab="second" id="statsTab">Stats</a>
 </div>
 <div class="ui bottom attached tab segment active" data-tab="first">
   <!-- <div class="ui segment"> -->
@@ -15,7 +15,9 @@
     <!-- </div> -->
 </div>
 <div class="ui bottom attached tab segment" data-tab="second" id="stats">
-  Second
+  <div class="ui active inverted dimmer" id="stats">
+       <div class="ui text loader">Loading</div>
+  </div>
 </div>
 
 
