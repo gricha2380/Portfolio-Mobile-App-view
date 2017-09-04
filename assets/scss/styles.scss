@@ -1,5 +1,7 @@
 body {
-	padding: 10px;
+	padding: 0;
+	overflow: auto;
+	background: #eaf7f9;
 }
 table {
 	width: 100%;
@@ -34,9 +36,13 @@ table {
 
 .segment {
 	height: inherit;
+	&.bottom.attached {
+		overflow-y: hidden;
+	}
 }
 
 #tabMenu {
+	margin-top: 40px;
 	.item {
 		width: 50%;
 	    text-align: center;
@@ -50,4 +56,27 @@ table {
 
 .ui.bottom.tab {
 	background: #f9fafb;
+}
+
+.bottomLink {
+	max-width: 100%;
+	display: block;
+	overflow: auto;
+	margin: 10px;
+}
+#refresh {
+	width: 100%;
+}
+.neg {
+color: red;
+}
+.pos {
+color: green;
+}
+.symbol {
+	font-weight: bold;
+	color:#15c
+}
+.bold {
+	font-weight: bold;
 }
