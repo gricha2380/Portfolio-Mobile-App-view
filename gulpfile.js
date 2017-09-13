@@ -46,7 +46,7 @@ gulp.task('sass', function() { // ['cleanCSS'],
 
 // concat & minify js
 gulp.task("js",function(){
-	gulp.src(["assets/js/jquery.min.js","assets/js/semantic.min.js","assets/js/scripts.js"])
+	gulp.src(["assets/js/jquery.min.js","assets/js/semantic.min.js","assets/js/scripts.js","assets/js/jquery.tablesorter.min.js"])
 	// gulp.src("assets/js/*.js")
 	.pipe(map.init())
 	.pipe(concat('scripts.min.js'))
