@@ -18,7 +18,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
         var holder = tabletop.sheets("Portfolio");
         var before = '<td>', after = '</td>', row='', beforeRow = '<tr>', afterRow = '</tr>';
         var beforeNeg = '<td class="neg">', beforePos = '<td class="pos">', beforeBlu = '<td class="symbol">', beforeBold = "<td class='bold'>";
-        var table = '<table class="sheetTable ui celled unstackable table">';
+        var table = '<table class="sheetTable ui celled unstackable table" data-sortlist="[[5,1]]">';
         var tableComplex = '<table class="sheetTable ui celled unstackable table GG">';
         var maxRows = 10;
         var columns = [0,2,3,4,5,6,7,8,10,12];
@@ -178,7 +178,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
         // final output
         //document.getElementById("data").innerHTML = data[0]+ /*x +" : "+ */ table + row + "</table>";
         document.getElementById("portfolio").innerHTML = tableComplex + "</table>" ;
-
+        sort();
       }
 
       document.write("The published spreadsheet is located at <a class='bottomLink'target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");
@@ -222,9 +222,18 @@ document.getElementById("statsTab").addEventListener("click", function(){
         }
         document.getElementById("stats").innerHTML = tableComplex + "</table>" ;
     }
+    sort();
 });
 
 document.getElementById("refresh").addEventListener("click", function(){
   //.fetch()
   location.reload();
 });
+
+
+function sort(){
+  console.log("table sort plug activated");
+  $('.sheetTable').tablesorter({
+      usNumberFormat : true
+    });
+}
