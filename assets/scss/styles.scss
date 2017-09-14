@@ -1,3 +1,6 @@
+*:focus {
+	outline: none;
+}
 body {
 	padding: 25px 0;
 	overflow: auto;
@@ -67,20 +70,25 @@ table {
 }
 #refresh {
 	width: 100%;
+	text-transform: uppercase;
 }
-.neg {
-color: red;
+
+#portfolio .tablesorter-default {
+	.neg {
+		color: red;
+	}
+	.pos {
+		color: green;
+	}
+	.symbol {
+		font-weight: bold;
+		color:#15c
+	}
+	.bold {
+		font-weight: bold;
+	}
 }
-.pos {
-color: green;
-}
-.symbol {
-	font-weight: bold;
-	color:#15c
-}
-.bold {
-	font-weight: bold;
-}
+
 
 #portfolio .ui.table thead th {
 	padding: .9em 2em .9em .7em;
@@ -281,6 +289,7 @@ $sortDescWhite : url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEAL
 	   you'll need to add additional lines for
 	   rows with more than 2 child rows
 	*/
+	/*
 	tbody > tr.hover td,
 	tbody > tr:hover td,
 	tbody > tr:hover + tr.tablesorter-childRow > td,
@@ -297,7 +306,7 @@ $sortDescWhite : url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEAL
 	tbody > tr.odd:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td {
 		@include oddHovered;
 	}
-
+*/
 	/* table processing indicator - indeterminate spinner */
 	.tablesorter-processing {
 		background-image: $processingIcon;
