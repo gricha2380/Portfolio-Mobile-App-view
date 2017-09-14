@@ -18,8 +18,8 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
         var holder = tabletop.sheets("Portfolio");
         var before = '<td>', after = '</td>', row='', beforeRow = '<tr>', afterRow = '</tr>';
         var beforeNeg = '<td class="neg">', beforePos = '<td class="pos">', beforeBlu = '<td class="symbol">', beforeBold = "<td class='bold'>";
-        var table = '<table class="sheetTable ui celled unstackable table" data-sortlist="[[5,1]]">';
-        var tableComplex = '<table class="sheetTable ui celled unstackable table GG">';
+        //var table = '<table class="sheetTable ui celled unstackable table" data-sortlist="[[3,1]]">';
+        var tableComplex = '<table class="sheetTable ui celled unstackable table GG" data-sortlist="[[5,1]]">';
         var maxRows = 10;
         var columns = [0,2,3,4,5,6,7,8,10,12];
         /*
@@ -187,7 +187,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
  $('.menu .item').tab();
 
 document.getElementById("statsTab").addEventListener("click", function(){
-  console.log("gello");
+  console.log("stats tab content here");
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: showStatsInfo,
                      simpleSheet: true } );
