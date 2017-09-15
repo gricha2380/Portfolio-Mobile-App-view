@@ -190,7 +190,7 @@ document.getElementById("statsTab").addEventListener("click", function(){
   console.log("stats tab content here");
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: showStatsInfo,
-                     simpleSheet: true } );
+                     simpleSheet: false } );
 
     function showStatsInfo(data, tabletop) {
       var holder = tabletop.sheets("Stats");
