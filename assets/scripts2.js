@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          var data = JSON.parse(this.responseText);
+          var data = this.responseText;//JSON.parse(this.responseText);
           showTableOne(data);
       }
   };
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   xmlStats.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-          var data = JSON.parse(this.responseText);
+          var data = this.responseText;//JSON.parse(this.responseText);
           showTableTwo(data);
       }
   };

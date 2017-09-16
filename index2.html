@@ -4,7 +4,8 @@
 	<title>Test bed</title>
 	<script type="text/javascript">
 		// I don't need to use table top. Strength in understanding.
-		var url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/edit?usp=sharing';
+		//var url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/edit?usp=sharing';
+		var url = 'https://spreadsheets.google.com/feeds/list/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/default/public/values?alt=json';
 
 		document.addEventListener("DOMContentLoaded", function(event) {
 		  console.log("DOM fully loaded and parsed");
@@ -21,7 +22,9 @@
 		  xmlhttp.send();
 
 		  function showTableOne(data) {
-		    data = JSON.parse(this.responseText);
+		  	console.log("here's pure Data");
+		  	console.log(data);
+		    //data = JSON.parse(this.responseText);
 		    console.log("full JSON...")
 		    console.log(data);
 		    var list = data["feed"]["entry"];
@@ -35,8 +38,8 @@
 
 		  xmlStats.onreadystatechange = function() {
 		    if (this.readyState == 4 && this.status == 200) {
-		  	data = JSON.parse(this.responseText);
-		          showTableTwo(data);
+		  	var newData = this.responseText;//JSON.parse(this.responseText);
+		          showTableTwo(newData);
 		      }
 		  };
 		  xmlStats.open("GET", url, true);
@@ -53,6 +56,6 @@
 	</script>
 </head>
 <body>
-
+hi
 </body>
 </html>
