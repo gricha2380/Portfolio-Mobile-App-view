@@ -73,7 +73,7 @@ table {
 	text-transform: uppercase;
 }
 
-#portfolio .tablesorter-default {
+//#portfolio .tablesorter-default {
 	.neg {
 		color: red;
 	}
@@ -87,13 +87,33 @@ table {
 	.bold {
 		font-weight: bold;
 	}
-}
+//}
 
+.viewSpreadsheet {
+	margin-top: 3em;
+}
 
 #portfolio .ui.table thead th {
 	padding: .9em 2em .9em .7em;
 }
 
+.row {
+	padding: 1.5em;
+}
+.valueMain {
+	font-size: 2.5em;
+	color: green;
+	font-weight: bold;
+}
+
+.container {
+	display: inline-block;
+    padding: 0 1em;
+}
+
+.value {
+	font-size: 1.5em;
+}
 
 /* Tablesorter Custom SCSS Theme by Dan Feidt (https://github.com/HongPong)
  Converted from Custom LESS Theme by Rob Garrison
