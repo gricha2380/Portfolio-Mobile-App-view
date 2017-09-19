@@ -1,6 +1,11 @@
 *:focus {
 	outline: none;
 }
+
+body ::-webkit-scrollbar-track {
+	background: transparent;
+}
+
 body {
 	padding: 25px 0;
 	overflow: auto;
@@ -36,6 +41,9 @@ table {
 #portfolio {
 	min-height: 200px;
 	overflow-x: auto;
+}
+#stats {
+	padding-top: 3em;
 }
 
 .segment {
