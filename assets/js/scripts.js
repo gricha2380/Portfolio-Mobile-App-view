@@ -41,11 +41,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     fetchPortfolio();
+    fetchPortfolio();
+    console.log("run 3 times to kickstart");
 
 
     function showStats(data) {
-        console.log("full JSON...")
-        console.log(data);
+        console.log("full JSON... ",data);
         var list = data["feed"]["entry"]["0"];
         console.log("list contents", list);
 
