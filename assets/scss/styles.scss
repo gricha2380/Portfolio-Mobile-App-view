@@ -113,11 +113,16 @@ table {
 
 .row {
 	padding: 1.5em;
+	background-color: transparent;
 }
 .valueMain {
 	font-size: 2.5em;
 	color: green;
 	font-weight: bold;
+}
+
+body ::-webkit-scrollbar-thumb {
+	background-color: transparent;
 }
 
 .container {
@@ -186,7 +191,7 @@ $processingIcon        : url('data:image/gif;base64,R0lGODlhFAAUAKEAAO7u7lpaWgAA
 /* zebra striping */
 @mixin allRows {
 	background-color: $bodyBackground;
-	color: $bodyTextColor;
+	//color: $bodyTextColor;
 }
 @mixin evenRows {
 	background-color: lighten($headerBackground, 40%);
