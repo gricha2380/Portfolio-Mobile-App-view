@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 table += beforeNeg + data["feed"]["entry"][i][colname]["$t"] + after;
             }
 
-            colname = "gsx$today_2"; //today $
+            colname = "gsx$gain24h"; //today $
             if (parseFloat(Number(data["feed"]["entry"][i][colname]["$t"].replace(/[^0-9-\.]+/g, ""))) > 0) {
                 table += beforePos + data["feed"]["entry"][i][colname]["$t"] + after;
             } else if (parseFloat(Number(data["feed"]["entry"][i][colname]["$t"].replace(/[^0-9-\.]+/g, ""))) == 0 || parseFloat(data["feed"]["entry"][i][colname]["$t"]) == "-") {
