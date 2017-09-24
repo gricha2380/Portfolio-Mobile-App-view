@@ -9,14 +9,20 @@ body ::-webkit-scrollbar-track {
 body {
 	padding: 25px 0;
 	overflow: auto;
-	background: #eaf7f9;
+	//background: #eaf7f9;
+	background-color: #292d2f;
 }
 table {
 	width: 100%;
 	background: #fff;
 	margin: 1em 0;
 	border: 1px solid rgba(34,36,38,.15);
-	&.ui.sheetTable {border: none;}
+	&.ui.sheetTable {
+		border: none;
+		thead tr {
+
+		}
+	}
 	box-shadow: none;
 	border-radius: .28571429rem;
 	text-align: left;
@@ -41,13 +47,22 @@ table {
 #portfolio {
 	min-height: 200px;
 	overflow-x: auto;
+	.ui.table thead tr:first-child>th:first-child {
+		border-radius: 0;
+	}
 }
 #stats {
 	padding-top: 3em;
 }
+#second {
+	padding: 0;
+}
 
+.ui.dimmer {
+	position: inherit;
+}
 .segment {
-	height: inherit;
+	//height: inherit;
 	&.bottom.attached {
 		overflow-y: hidden;
 	}
@@ -55,23 +70,36 @@ table {
 
 #tabMenu {
 	margin-top: 40px;
+    border: none;
 	.item {
 		width: 50%;
 	    text-align: center;
 	    display: inline;
+	    color: white;
 	    &.active {
-	    	background: #f9fafb;
+	    	//background: #f9fafb;
+	    	background: #fff;
+	    	color: black;
 	    }
 	}
 
 }
 
+#statsChart {
+	margin: auto;
+	// min-width: 400px;
+	// max-width: 897px;
+	width: 897px;
+}
+
 .ui.bottom.tab {
-	background: #f9fafb;
+	//background: #f9fafb;
+	background: #fff;
 }
 
 .ui.inverted.dimmer {
-	background: #f9fafb;
+	//background: #f9fafb;
+	background: #fff;
 }
 
 .bottomLink {
@@ -80,10 +108,14 @@ table {
 	overflow: auto;
 	margin: 10px;
 	background-color: transparent;
+	color: black;
+    text-decoration: underline;
 }
 #refresh {
 	width: 100%;
 	text-transform: uppercase;
+	background: #404040;
+    color: #e0e3ea;
 }
 
 //#portfolio .tablesorter-default {
@@ -118,7 +150,7 @@ table {
 .valueMain {
 	font-size: 2.5em;
 	color: green;
-	font-weight: bold;
+	//font-weight: bold;
 }
 
 body ::-webkit-scrollbar-thumb {
@@ -275,6 +307,9 @@ $sortDescWhite : url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEAL
 		background-repeat: no-repeat;
 		cursor: pointer;
 		background-position: 100%;
+
+		background-color: #93aebb;
+    	color: black;
 	}
 
 	.tablesorter-header.sorter-false {
@@ -283,12 +318,14 @@ $sortDescWhite : url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEAL
 	}
 
 	.tablesorter-headerAsc {
-		background-color: $headerAsc;
+		//background-color: $headerAsc;
+		background-color: rgba(147, 174, 187, 0.68);
 		@include sortAsc;
 	}
 
 	.tablesorter-headerDesc {
-		background-color: $headerDesc;
+		//background-color: $headerDesc;
+		background-color: rgba(147, 174, 187, 0.68);
 		@include sortDesc;
 	}
 

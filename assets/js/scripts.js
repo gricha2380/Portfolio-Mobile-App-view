@@ -3,6 +3,8 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
 
 var urlStocks = 'https://spreadsheets.google.com/feeds/list/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/1/public/values?alt=json';
 var urlStats = 'https://spreadsheets.google.com/feeds/list/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/2/public/values?alt=json';
+var urlChart = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive',
+  chartHTML;
 var before = '<td>',
     after = '</td>',
     row = '',
@@ -32,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             if  (this.readyState  ==  4  &&  this.status  ==  200) {        
                 var  data = JSON.parse(this.responseText);
                 showStats(data);
-                console.log("sent to function, sir.")
+                //console.log("sent to showStats function, sir.")
+                showChart();
             }
         }
 
@@ -44,6 +47,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     fetchPortfolio();
     console.log("run 3 times to kickstart");
 
+
+    function showChart() {
+      //document.querySelector("#chartHolder").innerHTML ='<iframe width="897" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive"></iframe>'
+      //document.getElementById("stats").innerHTML =
+      document.querySelector("#stats").innerHTML += '<iframe height="371" id="statsChart" seamless frameborder="0" allowtransparency="true" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive"></iframe>';
+      //$("#chartHolder").html('<iframe width="897" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive"></iframe>');
+    }
 
     function showStats(data) {
         console.log("full JSON... ",data);
@@ -59,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             //+statRow+statContainer+statLabel+"Crypto Growth"+endDiv+statValue+list["gsx$cryptogrowth"]["$t"]+endDiv+endDiv
             // why can I only see the first row of the JSON?
             +
-            "<div class='viewSpreadsheet'><a class='bottomLink'target='_new' href='" + public_spreadsheet_url + "'>" + "View Spreadsheet" + "</a></div>";
+            "<div class='viewSpreadsheet'><a class='bottomLink'target='_new' href='" + public_spreadsheet_url + "'>" + "View Spreadsheet" + "</a></div>"+"";
 
     }
 
