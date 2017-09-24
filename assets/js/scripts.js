@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       //document.querySelector("#chartHolder").innerHTML ='<iframe width="897" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive"></iframe>'
       //document.getElementById("stats").innerHTML =
       //document.querySelector("#stats").innerHTML += '<iframe height="371" id="statsChart" seamless frameborder="0" allowtransparency="true" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive"></iframe>';
-      document.querySelector("#stats").innerHTML += '<iframe width="'+"500"+'" height="390" id="statsChart" seamless frameborder="0" allowtransparency="true" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=image"></iframe>';
+      document.querySelector("#stats").innerHTML += '<div class="iframeHolder"><iframe width="'+"897"+'" height="390" id="statsChart" seamless frameborder="0" allowtransparency="true" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=image"></iframe></div>';
       //$("#chartHolder").html('<iframe width="897" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive"></iframe>');
+      //document.body.offsetWidth
     }
 
     function showStats(data) {

@@ -3,8 +3,17 @@
 }
 
 body ::-webkit-scrollbar-track {
-	background: transparent;
+	//background: transparent;
 }
+
+body ::-webkit-scrollbar {
+
+}
+
+body ::-webkit-scrollbar-thumb {
+	// background-color: transparent;
+}
+
 
 body {
 	padding: 25px 0;
@@ -92,6 +101,15 @@ table {
 	//width: 897px;
 }
 
+.iframeHolder {
+	overflow-x: auto;
+	//width: 500px;
+	width: 100%;
+    margin: auto;
+    height: 408px;
+
+}
+
 .ui.bottom.tab {
 	//background: #f9fafb;
 	background: #fff;
@@ -105,7 +123,6 @@ table {
 .bottomLink {
 	max-width: 100%;
 	display: block;
-	overflow: auto;
 	margin: 10px;
 	background-color: transparent;
 	color: black;
@@ -151,10 +168,6 @@ table {
 	font-size: 2.5em;
 	color: green;
 	//font-weight: bold;
-}
-
-body ::-webkit-scrollbar-thumb {
-	background-color: transparent;
 }
 
 .container {
