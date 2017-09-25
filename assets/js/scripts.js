@@ -77,10 +77,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             document.getElementById("stats").innerHTML += statRowLower + statContainer + statLabel + "Portfolio Gains" + endDiv + statValueNeg + list["gsx$portfoliogains"]["$t"] + endDiv + endDiv;
         }
 
+        // console.log("this is the growth!");
+        // console.log(parseFloat(list["gsx$portfoliogrowth"]["$t"]));
         //conditional formatting for portfolio growth %
-        if (parseFloat(Number(list["gsx$portfoliogrowth"]["$t"])) > 0) {
+        if (parseFloat(list["gsx$portfoliogrowth"]["$t"]) > 0) {
             document.querySelector("#stats .rowLower").innerHTML += statContainer + statLabel + "Portfolio Growth" + endDiv + statValuePos + list["gsx$portfoliogrowth"]["$t"] + endDiv + endDiv;
-        } else if (parseFloat(Number(list["gsx$portfoliogrowth"]["$t"])) == 0) {
+        } else if (parseFloat(list["gsx$portfoliogrowth"]["$t"]) == 0) {
             ddocument.querySelector("#stats .rowLower").innerHTML += statContainer + statLabel + "Portfolio Growth" + endDiv + statValue + list["gsx$portfoliogrowth"]["$t"] + endDiv + endDiv;
         } else {
             document.querySelector("#stats .rowLower").innerHTML += statContainer + statLabel + "Portfolio Growth" + endDiv + statValueNeg + list["gsx$portfoliogrowth"]["$t"] + endDiv + endDiv;
