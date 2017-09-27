@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
 
     fetchPortfolio();
-    fetchPortfolio();
-    console.log("run 3 times to kickstart");
+    setTimeout(fetchPortfolio(), 2000);
+    console.log("run twice to kickstart");
 
 
     function showChart() {
