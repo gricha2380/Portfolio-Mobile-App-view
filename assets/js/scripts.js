@@ -3,7 +3,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KrKXcbFDnM
 
 var urlStocks = 'https://spreadsheets.google.com/feeds/list/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/1/public/values?alt=json';
 var urlStats = 'https://spreadsheets.google.com/feeds/list/1KrKXcbFDnMjLGoM4WdKz24M4kAz2wERqYHVKFPdHm_U/2/public/values?alt=json';
-var urlChart = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=2089747653&amp;format=interactive',
+var urlChart = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTb5CY1SKVQhJUOHkF1Dxoviu4dhhBbHCkMvmn-0pQ_VX14xEIHspTZHVSxxWIEcXubZQ6rDpinTDAV/pubchart?oid=1740608643&format=interactive',
     chartHTML;
 var before = '<td>',
     after = '</td>',
